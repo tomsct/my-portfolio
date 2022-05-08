@@ -1,7 +1,8 @@
 import "./Navbar.css"
-import React, { useState } from 'react'
+import React, { useState } from "react"
 import { Link } from "react-scroll";
-import { FaBars, FaTimes } from 'react-icons/fa'
+import { FaBars, FaTimes } from "react-icons/fa"
+import { BsBriefcaseFill } from "react-icons/bs"
 import { IconContext } from "react-icons/lib";
 
 function Navbar() {
@@ -27,7 +28,8 @@ function Navbar() {
                 <div className="navbar">
                     <div className="navbar-container container">
                         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-                            my-portfolio
+                            <BsBriefcaseFill/>
+                            My portfolio
                         </Link>
                         <div className="menu-icon" onClick={handleClick}>
                             {click ? <FaTimes /> : <FaBars />}
@@ -38,14 +40,14 @@ function Navbar() {
                                     Home
                                 </Link>
                             </li>
-                            <li>
+                            <li className="nav-item">
                                 <Link to="projects" spy={true} smooth={true} offset={-85} duration={500} className="nav-links" onClick={closeMobileMenu}>
-                                    About
+                                   Projects 
                                 </Link>
                             </li>
-                            <li>
-                                <Link to="/projects" className="nav-links" onClick={closeMobileMenu}>
-                                    Projects
+                            <li className="nav-item">
+                                <Link to="contact" spy={true} smooth={true} offset={-85} duration={500} className="nav-links" onClick={closeMobileMenu}>
+                                    Contact 
                                 </Link>
                             </li>
                         </ul>
