@@ -2,7 +2,6 @@ import "./Projects.css";
 import React from "react";
 import Card from "./Card";
 import { IconContext } from "react-icons/lib";
-import "react-multi-carousel/lib/styles.css";
 
 function Pricing() {
     return (

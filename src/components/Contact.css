@@ -1,0 +1,60 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 24px;
+    padding: 24px;
+    color: #fff;
+    border-color: #fff;
+    border-style: solid;
+    border-radius: 25px;
+}
+
+.contact>p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+        'Lucida Sans', Arial, sans-serif;
+}
+
+.contact-heading {
+    margin-bottom: 24px;
+    font-size: 24px;
+}
+
+.contact-text {
+    margin-bottom: 24px;
+    font-size: 20px;
+}
+
+.contact-input {
+    padding: 8px 24px;
+    border-radius: 2px;
+    margin-right: 10px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    margin-bottom: 16px;
+    border: 1px solid #fff;
+    display: block;
+    resize: none;
+}
+
+.contact-input::placeholder {
+    color: #b1b1b1;
+}
+
+#btnContact {
+    display: block;
+    margin: auto;
+}
+
+@media screen and (max-width: 820px) {
+    .contact-input {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

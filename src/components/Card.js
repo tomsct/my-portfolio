@@ -5,7 +5,6 @@ import { FaFire } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 function Card({ cardTo, cardTitle }) {
-
     return (
         <>
             <Link to={cardTo} className="container-card">
