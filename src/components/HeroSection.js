@@ -4,32 +4,32 @@ import { Button } from "./Button";
 import { Link } from "react-router-dom";
 import { Contact } from "./Contact";
 
-function HeroSection({ lightBg, topLine, lightText, lightTextDesc, headline, description, buttonLabel, img, alt, imgStart, btnLinkTo, isContact }) {
+function HeroSection(props) {
     return (
         <>
-            <div className={lightBg ? "home__hero-section" : "home__hero-section darkBg"} id="hero">
+            <div className={props.lightBg ? "home__hero-section" : "home__hero-section darkBg"} id="hero">
                 <div className="container">
-                    { isContact ?
-                        <Contact/> 
+                    { props.isContact ?
+                        <Contact {...props} /> 
                         :
-                        <div className="row home__hero-row" style={{ display: "flex", flexDirection: imgStart === "start" ? "row-reverse" : "row" }}>
+                        <div className="row home__hero-row" style={{ display: "flex", flexDirection: props.imgStart === "start" ? "row-reverse" : "row" }}>
                             <div className="col">
                                 <div className="home__hero-img-wrapper">
-                                    <img src={process.env.PUBLIC_URL + img} alt={alt} className="home__hero-img" />
+                                    <img src={process.env.PUBLIC_URL + props.img} alt={props.alt} className="home__hero-img" />
                                 </div>
                             </div>
                             <div className="col">
                                 <div className="home__hero-text-wrapper">
-                                    <div className="top-line">{topLine}</div>
-                                    <h1 className={lightText ? "heading" : "heading dark"}>
-                                        {headline}
+                                    <div className="top-line">{props.topLine}</div>
+                                    <h1 className={props.lightText ? "heading" : "heading dark"}>
+                                        {props.headline}
                                     </h1>
-                                    <p className={lightTextDesc ? "home__hero-subtitle" : "home__hero-subtitle dark"}>
-                                        {description}
+                                    <p className={props.lightTextDesc ? "home__hero-subtitle" : "home__hero-subtitle dark"}>
+                                        {props.description}
                                     </p>
                                     <Link to="">
                                         <Button buttonSize="btn--wide" buttonColor="blue">
-                                            {buttonLabel}
+                                            {props.buttonLabel}
                                         </Button>
                                     </Link>
                                 </div>

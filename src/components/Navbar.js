@@ -1,11 +1,12 @@
 import "./Navbar.css"
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import { Link } from "react-scroll";
 import { FaBars, FaTimes } from "react-icons/fa"
 import { BsBriefcaseFill } from "react-icons/bs"
 import { IconContext } from "react-icons/lib";
+import LangContext from "./LangProvider";
 
-function Navbar() {
+function Navbar(props) {
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
 
@@ -20,6 +21,8 @@ function Navbar() {
         }
     }
 
+    const { switchLang, lang } = useContext(LangContext);
+
     window.addEventListener("resize", showButton);
 
     return (
@@ -28,8 +31,8 @@ function Navbar() {
                 <div className="navbar">
                     <div className="navbar-container container">
                         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-                            <BsBriefcaseFill/>
-                            My portfolio
+                            <BsBriefcaseFill />
+                            {props.Title}
                         </Link>
                         <div className="menu-icon" onClick={handleClick}>
                             {click ? <FaTimes /> : <FaBars />}
@@ -37,19 +40,23 @@ function Navbar() {
                         <ul className={click ? "nav-menu active" : "nav-menu"}>
                             <li className="nav-item">
                                 <Link to="hero" spy={true} smooth={true} duration={500} className="nav-links" onClick={closeMobileMenu}>
-                                    Home
+                                    {props.HomeButton}
                                 </Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="projects" spy={true} smooth={true} offset={-85} duration={500} className="nav-links" onClick={closeMobileMenu}>
-                                   Projects 
+                                    {props.ProjectsButton}
                                 </Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="contact" spy={true} smooth={true} offset={-85} duration={500} className="nav-links" onClick={closeMobileMenu}>
-                                    Contact 
+                                    {props.AboutButton}
                                 </Link>
                             </li>
+                            <div className="flagSection">
+                                <img id="btnFlag" className={lang === "es" ? "active" : ""} width="30px" height="30px" src={process.env.PUBLIC_URL + "/images/es.svg"} onClick={() => switchLang("es")} />
+                                <img id="btnFlag" className={lang === "en" ? "active" : ""} width="30px" height="30px" src={process.env.PUBLIC_URL + "/images/gb.svg"} onClick={() => switchLang("en")} />
+                            </div>
                         </ul>
                     </div>
                 </div>
