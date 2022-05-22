@@ -1,14 +1,13 @@
 import React from "react";
 import HeroSection from "../../HeroSection";
-import Projects  from "../../Projects";
-import { myProfile, contactInfo } from "./Data";
+import Projects from "../../Projects";
 
-function Home() {
+function Home(props) {
   return (
     <>
-      <HeroSection id="hero" {...myProfile} />
-      <Projects id="projects"/>
-      <HeroSection id="contact" {...contactInfo} />
+      <HeroSection id="hero" {...props.myProfile} />
+      <Projects id="projects" {...props.projects} />
+      <HeroSection id="contact" {...props.contactInfo} />
     </>
   );
 }
