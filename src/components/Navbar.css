@@ -87,6 +87,7 @@
 
 .flagSection img:hover {
   filter: none;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 960px) {

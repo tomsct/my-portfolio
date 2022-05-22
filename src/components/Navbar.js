@@ -50,7 +50,7 @@ function Navbar(props) {
                             </li>
                             <li className="nav-item">
                                 <Link to="contact" spy={true} smooth={true} offset={-85} duration={500} className="nav-links" onClick={closeMobileMenu}>
-                                    {props.AboutButton}
+                                    {props.ContactButton}
                                 </Link>
                             </li>
                             <div className="flagSection">

@@ -11,7 +11,20 @@ export default LangContext;
 
 export function LangProvider(props) {
 
-    const [lang, setLang] = useState(window.localStorage.getItem("appUILang") || window.navigator.language);
+    const initializeState = () => {
+        if("appUILang" in  window.localStorage)
+            return window.localStorage.getItem("appUILang");
+        
+        let languages = ["es", "en"];
+        var language = window.navigator.language.substring(0,2);
+
+        if(languages.indexOf(language) == -1)
+            language = "en";
+
+        return language;
+    };
+
+    const [lang, setLang] = useState(initializeState());
 
     useLayoutEffect(() => {
         const selectedLang = window.localStorage.getItem("appUILang");
@@ -21,22 +34,18 @@ export function LangProvider(props) {
         }
     }, [lang])
 
-    const switchLang = (ln) => {
-        ln = ln.substring(0,2);
 
-        switch (ln) {
-            case "es":
-                setLang(ln);
-                break;
-            default:
-                setLang("en");
-        }
+    const switchLang = (ln) => {
+        ln = ln.substring(0, 2);
+
+        setLang(ln);
         window.localStorage.setItem("appUILang", ln);
+
     };
 
-    return (
-        <LangContext.Provider value={{ lang, switchLang, currentLangData: appData[lang] }}>
-            {props.children}
-        </LangContext.Provider>
-    );
+return (
+    <LangContext.Provider value={{ lang, switchLang, currentLangData: appData[lang] }}>
+        {props.children}
+    </LangContext.Provider>
+);
 }

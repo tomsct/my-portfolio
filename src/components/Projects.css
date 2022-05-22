@@ -21,7 +21,8 @@
 
 .projects__heading {
   color: #1c2237;
-  margin-bottom: 24px;
+  margin: auto; 
+  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 960px) {

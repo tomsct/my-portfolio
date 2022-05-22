@@ -2,9 +2,9 @@ export const appData = {
     "en": {
         navbar: {
             Title: "My Portfolio",
-            HomeButton: "Home",
+            HomeButton: "About",
             ProjectsButton: "Projects",
-            AboutButton: "About",
+            ContactButton: "Contact",
         },
         myProfile: {
             lightBg: false,
@@ -19,33 +19,38 @@ export const appData = {
             alt: "",
             isContact: false
         },
-        projects: [
-            {
-                cardTo: "",
-                image: "/images/card_sample.jpg",
-                title: "Project 1",
-                paragraph: "sample 1",
-                lblButton: "More info"
-            },
-            {
-                cardTo: "",
-                image: "/images/card_sample.jpg",
-                title: "Project 2",
-                paragraph: "sample 2",
-                lblButton: "More info"
-            },
-            {
-                cardTo: "",
-                image: "/images/card_sample.jpg",
-                title: "Project 3",
-                paragraph: "sample 3",
-                lblButton: "More info"
-            }],
+        projects:
+        {
+            title: "Projects",
+            cards:
+                [
+                    {
+                        cardTo: "",
+                        image: "/images/card_sample.jpg",
+                        title: "Project 1",
+                        paragraph: "sample 1",
+                        lblButton: "More info"
+                    },
+                    {
+                        cardTo: "",
+                        image: "/images/cli.gif",
+                        title: "Project 2",
+                        paragraph: "sample 2",
+                        lblButton: "More info"
+                    },
+                    {
+                        cardTo: "",
+                        image: "/images/card_sample.jpg",
+                        title: "Project 3",
+                        paragraph: "sample 3",
+                        lblButton: "More info"
+                    }],
+        },
         contactInfo: {
             lightBg: false,
             lightText: true,
             lightTextDesc: true,
-            topLine: "Contactame",
+            topLine: "Contact me",
             headline: "",
             description: "",
             buttonLabel: "",
@@ -53,10 +58,8 @@ export const appData = {
             img: "",
             alt: "",
             isContact: true,
-            lblName: "Name",
-            lblEmail: "Email",
-            lblMessage: "Message",
-            lblButton: "Contact me"
+            lblButton: "Contact me",
+            successMessage: "Message sent succesfully"
         },
         footer: {
             copyright: "Copyright text"
@@ -65,9 +68,9 @@ export const appData = {
     "es": {
         navbar: {
             Title: "Mi portfolio",
-            HomeButton: "Inicio",
+            HomeButton: "Sobre mi",
             ProjectsButton: "Projectos",
-            AboutButton: "Sobre mi",
+            ContactButton: "Contacto",
         },
         myProfile: {
             lightBg: false,
@@ -82,28 +85,33 @@ export const appData = {
             alt: "",
             isContact: false
         },
-        projects: [
-            {
-                cardTo: "",
-                image: "/images/card_sample.jpg",
-                title: "Projecto 1",
-                paragraph: "ejemplo 1",
-                lblButton: "Mas informacion"
-            },
-            {
-                cardTo: "",
-                image: "/images/card_sample.jpg",
-                title: "Projecto 2",
-                paragraph: "ejemplo 2",
-                lblButton: "Mas informacion"
-            },
-            {
-                cardTo: "",
-                image: "/images/card_sample.jpg",
-                title: "Projecto 3",
-                paragraph: "ejemplo 3",
-                lblButton: "Mas informacion"
-            }],
+        projects:
+        {
+            title: "Projectos",
+            cards:
+                [
+                    {
+                        cardTo: "",
+                        image: "/images/card_sample.jpg",
+                        title: "Project 1",
+                        paragraph: "sample 1",
+                        lblButton: "More info"
+                    },
+                    {
+                        cardTo: "",
+                        image: "/images/card_sample.jpg",
+                        title: "Project 2",
+                        paragraph: "sample 2",
+                        lblButton: "More info"
+                    },
+                    {
+                        cardTo: "",
+                        image: "/images/card_sample.jpg",
+                        title: "Project 3",
+                        paragraph: "sample 3",
+                        lblButton: "More info"
+                    }],
+        },
         contactInfo: {
             lightBg: false,
             lightText: true,
@@ -116,10 +124,8 @@ export const appData = {
             img: "",
             alt: "",
             isContact: true,
-            lblName: "Nombre",
-            lblEmail: "Email",
-            lblMessage: "Mensaje",
-            lblButton: "Contactame"
+            lblButton: "Contactame",
+            successMessage: "Mensaje enviado con éxito"
         },
         footer: {
             copyright: "Texto de copyright"

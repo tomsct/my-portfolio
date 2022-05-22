@@ -15,9 +15,9 @@ function Card(props) {
                     <p>
                         {props.paragraph}
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis neque sodales, eleifend enim eu, lobortis arcu. Ut faucibus facilisis elit. Mauris dictum dolor a 
-                        sagittis auctor. Aliquam gravida leo nec orci placerat, in hendrerit tellus condimentum.
+                        sagittis auctor. Aliquam gravida leo nec orci placerat, in hendrerit tellus condimentum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis neque sodales  
                     </p>
-                    <Button buttonSize="btn--wide" buttonColor="primary">
+                    <Button buttonSize="btn" buttonColor="primary">
                         {props.lblButton}
                     </Button>
                 </div>
